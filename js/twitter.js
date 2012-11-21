@@ -1,7 +1,7 @@
 TwitterFeed = function() 
 {   
     //variables
-    var user = "twitterapi";
+    var user = "walking_fishy";
     var tweetCount = 3;
     var excludeReplies = false;
     var includeRetweets = false;
