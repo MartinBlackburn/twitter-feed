@@ -30,6 +30,8 @@ twitterFeed.excludeRetweets();
 twitterFeed.getTweets();
 ```
 
+If you exclude retweets and replies you may get less then the number you specified
+
 [View it in action here](http://martinblackburn.github.com/twitter-feed/)
 
 ###Notes
