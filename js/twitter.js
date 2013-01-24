@@ -104,9 +104,15 @@ TwitterFeed = function()
             tweet = tweet.replace(/((https?|s?ftp|ssh)\:\/\/[^"\s\<\>]*[^.,;'">\:\s\<\>\)\]\!])/g, function(url) {
                 return '<a href="' + url + '">' + url + '</a>';
             });
+                    
+            //format any user to a link
+            tweet = tweet.replace(/(^|\s)@(\w+)/ig, function(reply) {
+                return reply.charAt(0) + '<a href="http://twitter.com/' + reply.substring(2) + '">' + reply.substring(1) + '</a>';
+            });
             
-            tweet = tweet.replace(/\B@([_a-z0-9]+)/ig, function(reply) {
-                return reply.charAt(0) + '<a href="http://twitter.com/' + reply.substring(1) + '">' + reply.substring(1) + '</a>';
+            //format any hashtag to a link
+            tweet = tweet.replace(/(^|\s)#(\w+)/ig, function(reply) {
+                return reply.charAt(0) + '<a href="http://twitter.com/search?q=%23' + reply.substring(2) + '">' + reply.substring(1) + '</a>';
             });
             
             //add tweet to the list
