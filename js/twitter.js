@@ -154,18 +154,3 @@ TwitterFeed = function()
         throw(err);  
     } 
 };
-
-$(function() 
-{
-    $(".tweets").each(function()
-    {
-        //setup twitter feed
-        var twitterFeed = new TwitterFeed();
-        
-        //pass the element to draw the tweets in
-        twitterFeed.setTwitterElement($(".tweets"));
-        
-        //getTweets
-        twitterFeed.getTweets();
-    });
-});
