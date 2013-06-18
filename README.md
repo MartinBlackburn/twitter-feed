@@ -1,5 +1,8 @@
 #Twitter Feed
 
+## This will no longer work as of 11th June 2013 due to Twitter updating their API.
+Please see this [post on my website](http://www.martinblackburn.co.uk/blog/creating-a-custom-twitter-feed.html) for an alternative solution.
+
 A twitter feed using jQuery and the Twitter API
 
 ##How it works
@@ -31,8 +34,6 @@ twitterFeed.getTweets();
 ```
 
 If you exclude retweets and replies you may get less then the number you specified
-
-[View it in action here](http://martinblackburn.github.com/twitter-feed/)
 
 ###Notes
 This was written using jQuery 1.8.2
